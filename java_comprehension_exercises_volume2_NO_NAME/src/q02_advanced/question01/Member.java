@@ -1,12 +1,15 @@
-package q01_basic.question04;
+package q02_advanced.question01;
 
-class Member {
+import java.util.List;
+
+public class Member {
 
 	private int id;
 	private String password;
 	private String name;
 	private int age;
 	private int rank;
+	private List<Coupon> coupons;
 
 	public int getId() {
 		return id;
@@ -48,30 +51,25 @@ class Member {
 		this.rank = rank;
 	}
 
+	public List<Coupon> getCoupons() {
+		return coupons;
+	}
+
+	public void setCoupons(List<Coupon> coupons) {
+		this.coupons = coupons;
+	}
+
 	public Member() {
-		this.setId(0);
-		this.setPassword(null);
-		this.name = null;
-		this.age = 0;
-		this.rank = 0;
+
 	}
 
 	public Member(int id, String password, String name, int age, int rank) {
-		this.setId(id);
-		this.setPassword(password);
-		this.setName(name);
-		this.setAge(age);
-		this.setRank(rank);
-	}
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.age = age;
+		this.rank = rank;
 
-	public void showMember() {
-		System.out.println("***MEMBER DATA***");
-		System.out.println("id:" + this.id);
-		System.out.println("password:" + this.password);
-		System.out.println("name:" + this.name);
-		System.out.println("age:" + this.age);
-		System.out.println("rank:" + this.rank);
-		System.out.println("*****************");
 	}
 
 }
