@@ -20,7 +20,7 @@ class LoginService {
 		Member loginMember = null;
 
 		for (Member member : this.memberStorage.getMembers()) {
-			if ((inputId == member.getId()) && (inputPassword == member.getPassword())) {
+			if ((inputId == member.getId()) && (member.getPassword().equals(inputPassword))) {
 				loginMember = member;
 				break;
 			}
